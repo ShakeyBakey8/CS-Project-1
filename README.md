@@ -89,27 +89,15 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the `install_elk.yml` file to the `/etc/ansible/` directory.
-- Update the _____ file to include...
-- 
-
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-
-- _Which URL do you navigate to in order to check that the ELK server is running?
-
-
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._  
+- Copy the `install_elk.yml` file to the `/etc/ansible/` directory.   
 
 - Navigate to the ansible folder  
 `cd /etc/ansible`
 
 - To make the playbook install_elk.yml run on a specific machine you need to edit the /ansible/hosts file. Here you make groups, an example the elk group, adding the machines ip to the group. This way when you run a playbook with ansible, you can specify which group to run them on. 
 Edit the hosts file, place ELKVM in a group  
-`nano hosts`
-`[elk]`
+`nano hosts`  
+`[elk]`  
 `10.1.0.4 ansible_python_interpreter=/usr/bin/python3`
 
 - Run the playbook  
